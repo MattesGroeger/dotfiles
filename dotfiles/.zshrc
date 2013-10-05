@@ -60,7 +60,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git brew osx svn extract)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/git-flow-completion.zsh
+source $HOME/.zsh/git-flow-completion.zsh
 
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/Applications/Development/nodejs/bin/bin:/usr/local/opt/mongodb
