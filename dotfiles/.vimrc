@@ -42,16 +42,16 @@ set wrap        "dont wrap lines
 set linebreak   "wrap lines at convenient points
 
 " Resize current buffer by +/- 5 
-nnoremap <S-L> :vertical resize -5<cr>
-nnoremap <S-K> :resize +5<cr>
-nnoremap <S-J> :resize -5<cr>
-nnoremap <S-H> :vertical resize +5<cr>
+nnoremap <C-L> :vertical resize -5<cr>
+nnoremap <C-K> :resize +5<cr>
+nnoremap <C-J> :resize -5<cr>
+nnoremap <C-H> :vertical resize +5<cr>
 
 " Move between windows with Ctrl + J,K,L,H
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <S-J> <C-W><C-J>
+nnoremap <S-K> <C-W><C-K>
+nnoremap <S-L> <C-W><C-L>
+nnoremap <S-H> <C-W><C-H>
 
 " Open new windows at bottom/right
 set splitbelow
