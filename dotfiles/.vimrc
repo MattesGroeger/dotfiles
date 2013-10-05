@@ -7,6 +7,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-colorscheme-switcher'
+Bundle 'plasticboy/vim-markdown'
 
 filetype on
 filetype plugin indent on
@@ -59,3 +60,6 @@ set splitright
 
 " Load indent file for the current filetype
 filetype indent on
+
+" Markdown initial fold off
+let g:vim_markdown_initial_foldlevel=99
