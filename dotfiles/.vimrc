@@ -8,6 +8,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-colorscheme-switcher'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-surround'
 
 filetype on
 filetype plugin indent on
