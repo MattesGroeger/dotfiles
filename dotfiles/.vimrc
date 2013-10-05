@@ -50,10 +50,10 @@ nnoremap <C-J> :resize -5<cr>
 nnoremap <C-H> :vertical resize +5<cr>
 
 " Move between windows with Ctrl + J,K,L,H
-nnoremap <S-J> <C-W><C-J>
-nnoremap <S-K> <C-W><C-K>
-nnoremap <S-L> <C-W><C-L>
-nnoremap <S-H> <C-W><C-H>
+" noremap <M-J> <C-W><C-J>
+" noremap <M-K> <C-W><C-K>
+" noremap <M-L> <C-W><C-L>
+" noremap <M-H> <C-W><C-H>
 
 " Open new windows at bottom/right
 set splitbelow
