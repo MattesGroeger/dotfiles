@@ -19,6 +19,14 @@ If you want more control over the symlinking, you can create a dotty-symlink.yml
     
     file_in_repo:.in_home_dir
 
+## Setup
+
+```
+$ gem install dotty
+$ dotty add dev git@github.com:MattesGroeger/dotfiles.git
+$ dotty bootstrap dev
+```
+
 ## dotty-repository.thor
 
 If you want to do more than symlinking, you can create a dotty-repository.thor that implements the 'bootstrap' and 'implode' thor tasks.
