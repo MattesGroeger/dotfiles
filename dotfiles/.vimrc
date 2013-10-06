@@ -33,9 +33,6 @@ set softtabstop=2
 set expandtab
 set autoindent
 
-" Toggle NERDTree
-nnoremap <F2> :NERDTreeToggle<cr>
-
 " Display tabs and trailing spaces
 set list
 set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
@@ -50,8 +47,10 @@ nnoremap <C-K> :resize +5<cr>
 nnoremap <C-J> :resize -5<cr>
 nnoremap <C-H> :vertical resize +5<cr>
 
-" Toggle search highlight
-nnoremap <F3> :set hlsearch!<cr>
+" F-Keys
+nnoremap <F2> :NERDTreeToggle<cr>
+nnoremap <F3> :NERDTreeFind<cr>
+nnoremap <F4> :set hlsearch!<cr>
 
 " Move between windows with Ctrl + J,K,L,H
 " noremap <M-J> <C-W><C-J>
