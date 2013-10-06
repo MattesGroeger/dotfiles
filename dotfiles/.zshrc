@@ -72,7 +72,7 @@ function fnd {
 }
 
 # Customize to your needs...
-export PATH=/usr/bin :/bin :/usr/sbin :/sbin :/usr/local/bin :/usr/local/git/bin :/usr/local/git/libexec/git-core :/usr/local/sbin :/usr/local/opt/mongodb :/usr/local/scala/scala-2.8.0.final/bin :/usr/local/apparat/apparat-1.0-RC9 :/usr/local/bin/xcode-universal-binary :/usr/X11/bin :/Applications/Development/nodejs/bin/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/git/libexec/git-core:/usr/local/sbin:/usr/local/opt/mongodb:/usr/local/scala/scala-2.8.0.final/bin:/usr/local/apparat/apparat-1.0-RC9:/usr/local/bin/xcode-universal-binary:/usr/X11/bin:/Applications/Development/nodejs/bin/bin
 export CLOUDANT_URL=https://app4215228.heroku:gObSmm6KkKdhmLfoQxrNOmyq@app4215228.heroku.cloudant.com
 export NODE_PATH=NODE_PATH:/usr/local/lib/node_modules
 
