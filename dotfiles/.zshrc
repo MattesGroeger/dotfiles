@@ -1,28 +1,3 @@
-# Aliases
-alias gco='git co'
-alias gci='git ci'
-alias grb='git rb'
-alias gsh='git show --unified=10 $@'
-alias dpush='git push origin develop'
-alias dpull='git pull origin develop'
-alias gd='git d --word-diff $@'
-alias c='git commit -v $@'
-alias s='git status -sb'
-alias b='git branch -avv'
-alias r='git svn rebase'
-alias lg='git lg'
-alias ls="ls -G"
-alias ll='ls -hl'
-alias la='ls -hal'
-
-# directories
-hash -d ws=~/Documents/workspaces
-
-function fnd {
-  find . -name $1
-  # echo **/*[^.fla][^.jar](Lm+1) | xargs ls -la
-}
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -57,14 +32,48 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew osx svn extract)
+plugins=(git brew osx svn extract pod)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/git-flow-completion.zsh
 
+# Global aliases
+alias -g G='| grep'
+alias -g L='| less'
+
+# Normal aliases
+alias gco='git co'
+alias gci='git ci'
+alias grb='git rb'
+alias gsh='git show --unified=10 $@'
+alias gd='git d --word-diff $@'
+alias dpush='git push origin develop'
+alias dpull='git pull origin develop'
+alias c='git commit -v $@'
+alias s='git status -sb'
+alias b='git branch -avv'
+alias r='git svn rebase'
+alias lg='git lg'
+alias lgme='git lg -500 | egrep " (mgroeger|Mattes Groeger)\)"'
+alias ls="ls -G"
+alias ll='ls -hl'
+alias la='ls -hal'
+alias unfuckbootstrap="launchctl list|grep UIKitApplication|awk '{print $3}'|xargs launchctl"
+
+# Directories
+hash -d ws=~/Documents/workspaces
+hash -d wsios=~/Documents/workspaces/workspace_ios
+hash -d sbs=~/Documents/workspaces/workspace_sbs
+hash -d puios=~/Documents/workspaces/workspace_pu/pocketuniverse
+
+function fnd {
+  find . -name $1
+  # echo **/*[^.fla][^.jar](Lm+1) | xargs ls -la
+}
+
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/Applications/Development/nodejs/bin/bin:/usr/local/opt/mongodb
+export PATH=/usr/bin :/bin :/usr/sbin :/sbin :/usr/local/bin :/usr/local/git/bin :/usr/local/git/libexec/git-core :/usr/local/sbin :/usr/local/opt/mongodb :/usr/local/scala/scala-2.8.0.final/bin :/usr/local/apparat/apparat-1.0-RC9 :/usr/local/bin/xcode-universal-binary :/usr/X11/bin :/Applications/Development/nodejs/bin/bin
+export CLOUDANT_URL=https://app4215228.heroku:gObSmm6KkKdhmLfoQxrNOmyq@app4215228.heroku.cloudant.com
+export NODE_PATH=NODE_PATH:/usr/local/lib/node_modules
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export NODE_PATH="/usr/local/lib/node_modules/"
