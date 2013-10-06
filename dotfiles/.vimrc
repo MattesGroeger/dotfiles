@@ -50,6 +50,9 @@ nnoremap <C-K> :resize +5<cr>
 nnoremap <C-J> :resize -5<cr>
 nnoremap <C-H> :vertical resize +5<cr>
 
+" Toggle search highlight
+nnoremap <F3> :set hlsearch!<cr>
+
 " Move between windows with Ctrl + J,K,L,H
 " noremap <M-J> <C-W><C-J>
 " noremap <M-K> <C-W><C-K>
