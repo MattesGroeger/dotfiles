@@ -17,6 +17,7 @@ filetype plugin indent on
 set nocompatible
 
 " Basic editor settings
+set t_Co=256
 :syntax on
 :set number
 :colorscheme slate
