@@ -43,15 +43,15 @@ set wrap        "dont wrap lines
 set linebreak   "wrap lines at convenient points
 
 " Resize current buffer by +/- 5 
-nnoremap <C-L> :vertical resize -5<cr>
-nnoremap <C-K> :resize +5<cr>
-nnoremap <C-J> :resize -5<cr>
-nnoremap <C-H> :vertical resize +5<cr>
+nnoremap <C-L> :vertical resize -5<CR>
+nnoremap <C-K> :resize +5<CR>
+nnoremap <C-J> :resize -5<CR>
+nnoremap <C-H> :vertical resize +5<CR>
 
 " F-Keys
-nnoremap <F2> :NERDTreeToggle<cr>
-nnoremap <F3> :NERDTreeFind<cr>
-nnoremap <F4> :set hlsearch!<cr>
+nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F3> :NERDTreeFind<CR>
+nnoremap <F4> :set hlsearch!<CR>
 
 " Move between windows with Ctrl + J,K,L,H
 " noremap <M-J> <C-W><C-J>
