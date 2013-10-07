@@ -59,6 +59,12 @@ nnoremap <F4> :set hlsearch!<CR>
 " noremap <M-L> <C-W><C-L>
 " noremap <M-H> <C-W><C-H>
 
+" Search
+set grepprg=ack\ -k
+nnoremap gs :silent! :grep <C-R><C-W> .<CR>:copen<CR>:redra!<CR>
+nnoremap gn :silent! :keepjumps :cnext<CR>
+nnoremap gp :silent! :keepjumps :cprevious<CR>
+
 " Open new windows at bottom/right
 set splitbelow
 set splitright
