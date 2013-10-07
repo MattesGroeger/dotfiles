@@ -20,7 +20,6 @@ set nocompatible
 set t_Co=256
 :syntax on
 :set number
-:set relativenumber
 :colorscheme slate
 
 " Formatting options
