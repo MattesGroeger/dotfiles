@@ -20,7 +20,8 @@ set nocompatible
 set t_Co=256
 :syntax on
 :set number
-:colorscheme darkblue
+:set relativenumber
+:colorscheme slate
 
 " Formatting options
 set showcmd     "show incomplete cmds down the bottom
