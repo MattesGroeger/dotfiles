@@ -1,5 +1,7 @@
-set rtp+=~/.vim/bundle/vundle/
+﻿set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
+set showcmd
 
 " Bundles
 Bundle 'gmarik/vundle'
@@ -11,6 +13,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'wesQ3/vim-windowswap'
 
 filetype on
 filetype plugin indent on
