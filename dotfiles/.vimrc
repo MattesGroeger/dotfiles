@@ -9,6 +9,7 @@ Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-colorscheme-switcher'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-surround'
+Bundle 'kien/ctrlp.vim'
 
 filetype on
 filetype plugin indent on
