@@ -1,11 +1,13 @@
 ﻿" Turn off vi compatibility
 set nocompatible
+
+set noswapfile
+set showcmd
+
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
-set showcmd
 
 " Bundles
 Bundle 'gmarik/vundle'
