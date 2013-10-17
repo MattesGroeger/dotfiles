@@ -1,4 +1,8 @@
-﻿set rtp+=~/.vim/bundle/vundle/
+﻿" Turn off vi compatibility
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 set showcmd
@@ -14,12 +18,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'wesQ3/vim-windowswap'
+Bundle 'kchmck/vim-coffee-script'
 
-filetype on
 filetype plugin indent on
-
-" Turn off vi compatibility
-set nocompatible
 
 " Basic editor settings
 set t_Co=256
