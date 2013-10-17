@@ -14,3 +14,5 @@
 	d = diff
 [push]
 	default = upstream
+[core]
+	editor = /usr/bin/vim
