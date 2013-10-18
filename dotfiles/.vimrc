@@ -1,9 +1,6 @@
 ﻿" Turn off vi compatibility
 set nocompatible
 
-set noswapfile
-set showcmd
-
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
@@ -21,18 +18,42 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'wesQ3/vim-windowswap'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/syntastic'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on
 
 " Basic editor settings
 set t_Co=256
-:syntax on
-:set number
-:colorscheme desert
+syntax on
+colorscheme desert
+set number                        " Show line numbers
+set ruler                         " Show cursor position.
+set backspace=indent,eol,start    " Allow deleting characters with backspace
+set ignorecase                    " Allow case-insensitive searching
+set smartcase                     " But case-sensitive if expression contains a capital letter
+set autoread                      " automatically re-read changed files
+set laststatus=2                  " Show the status line all the time
+
+" Useful status information at bottom of screen
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %{SyntasticStatuslineFlag()}%=%-16(\ %l,%c-%v\ %)%P
+
+" Current line highlight
+set cursorline                    " Enable highlight of current line
+hi CursorLine guisp=NONE gui=NONE guifg=NONE guibg=darkgrey ctermfg=NONE ctermbg=black term=NONE cterm=NONE
+
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set noswapfile                    " no swap files
 
 " Formatting options
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
+
+" Spell checker
+highlight SpellBad cterm=underline,bold
+set spellsuggest=8
 
 " Default indent settings
 set smartindent
@@ -41,15 +62,44 @@ set softtabstop=2
 set expandtab
 set autoindent
 
+" Auto completion settings
+set completeopt=longest,menuone
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
 " Display tabs and trailing spaces
 set list
 set listchars=nbsp:•,extends:»,precedes:«,trail:⋅
 set incsearch   "find the next match as we type the search
-set hlsearch    "hilight searches by default
-set wrap        "dont wrap lines
+set hlsearch    "highlight searches by default
+set wrap        "don't wrap lines
 set linebreak   "wrap lines at convenient points
 
-" Resize current buffer by +/- 5 
+" Command line auto completion
+set wildmenu
+set wildmode=longest:full,full
+
+" remove trailing whitespace on save
+" function! TrimSpaces()
+"   if !&binary && &filetype != 'diff'
+"     %s/\(^---\?\)\@<!\s*$//ge
+"     ''
+"   end
+" endfunction
+" autocmd FileWritePre * :silent! call TrimSpaces()
+" autocmd FileAppendPre * :silent! call TrimSpaces()
+" autocmd FilterWritePre * :silent! call TrimSpaces()
+" autocmd BufWritePre * :silent! call TrimSpaces()
+
+" Highlight status bar when in insert mode
+au InsertEnter * hi StatusLine ctermfg=darkred
+au InsertLeave * hi StatusLine ctermfg=white
+hi StatusLine ctermfg=white
+
+" Configure git diff column (beside line numbers)
+highlight clear SignColumn
+
+" Resize current buffer by +/- 5
 nnoremap <C-L> :vertical resize -5<CR>
 nnoremap <C-K> :resize +5<CR>
 nnoremap <C-J> :resize -5<CR>
