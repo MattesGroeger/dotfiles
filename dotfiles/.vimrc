@@ -21,6 +21,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Lokaltog/vim-easymotion'
 
 filetype plugin indent on
 
@@ -35,6 +36,7 @@ set ignorecase                    " Allow case-insensitive searching
 set smartcase                     " But case-sensitive if expression contains a capital letter
 set autoread                      " automatically re-read changed files
 set laststatus=2                  " Show the status line all the time
+set history=1000
 
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %{SyntasticStatuslineFlag()}%=%-16(\ %l,%c-%v\ %)%P
@@ -95,6 +97,7 @@ set wildmode=longest:full,full
 au InsertEnter * hi StatusLine ctermfg=darkred
 au InsertLeave * hi StatusLine ctermfg=white
 hi StatusLine ctermfg=white
+set fillchars+=vert:\ 
 
 " Configure git diff column (beside line numbers)
 highlight clear SignColumn
