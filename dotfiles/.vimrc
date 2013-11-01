@@ -22,6 +22,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-repeat'
+Bundle 'mileszs/ack.vim'
+Bundle 'skwp/greplace.vim'
 
 filetype plugin indent on
 
