@@ -79,3 +79,6 @@ export CLOUDANT_URL=https://app4215228.heroku:gObSmm6KkKdhmLfoQxrNOmyq@app421522
 export NODE_PATH=NODE_PATH:/usr/local/lib/node_modules
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# added by travis gem
+[ -f /Users/mattes/.travis/travis.sh ] && source /Users/mattes/.travis/travis.sh
