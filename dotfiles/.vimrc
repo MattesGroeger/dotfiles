@@ -67,6 +67,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+set clipboard=unnamed
 
 " Auto completion settings
 set completeopt=longest,menuone
