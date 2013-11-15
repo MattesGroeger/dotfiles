@@ -76,7 +76,7 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvis
 
 " Display tabs and trailing spaces
 set list
-set listchars=nbsp:•,extends:»,precedes:«,trail:⋅
+set listchars=tab:»·,nbsp:•,extends:»,precedes:«,trail:⋅
 set incsearch   "find the next match as we type the search
 set hlsearch    "highlight searches by default
 set wrap        "don't wrap lines
