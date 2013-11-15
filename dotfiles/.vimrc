@@ -25,6 +25,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-repeat'
 Bundle 'mileszs/ack.vim'
 Bundle 'skwp/greplace.vim'
+Bundle 'godlygeek/tabular'
 
 filetype plugin indent on
 
