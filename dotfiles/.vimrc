@@ -143,3 +143,9 @@ filetype indent on
 
 " Markdown initial fold off
 let g:vim_markdown_initial_foldlevel=99
+
+" Nerdtree
+let NERDTreeIgnore = ['\.meta$']
+
+" Custom file type handlin
+autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
