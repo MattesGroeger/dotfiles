@@ -26,6 +26,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'mileszs/ack.vim'
 Bundle 'skwp/greplace.vim'
 Bundle 'godlygeek/tabular'
+Bundle 'jelera/vim-javascript-syntax'
 
 filetype plugin indent on
 
