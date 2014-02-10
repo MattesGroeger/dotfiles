@@ -105,6 +105,9 @@ au InsertLeave * hi StatusLine ctermfg=white
 hi StatusLine ctermfg=white
 set fillchars+=vert:\ 
 
+" Force syntax highlighting on weird file extensions
+au BufReadPost *.sgte set syntax=html
+
 " Configure git diff column (beside line numbers)
 highlight clear SignColumn
 
