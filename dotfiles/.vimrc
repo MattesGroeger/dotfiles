@@ -27,6 +27,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'skwp/greplace.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'jlanzarotta/bufexplorer'
 
 filetype plugin indent on
 
@@ -149,3 +150,7 @@ let NERDTreeIgnore = ['\.meta$']
 
 " Custom file type handlin
 autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype cs setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+" BufExplorer config
+let g:bufExplorerShowRelativePath=1
