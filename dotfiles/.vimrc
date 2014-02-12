@@ -21,13 +21,13 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-repeat'
 Bundle 'mileszs/ack.vim'
 Bundle 'skwp/greplace.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'jlanzarotta/bufexplorer'
+Bundle 'regedarek/ZoomWin'
 
 filetype plugin indent on
 
