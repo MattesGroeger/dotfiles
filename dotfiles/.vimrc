@@ -160,3 +160,7 @@ autocmd Filetype cs setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " BufExplorer config
 let g:bufExplorerShowRelativePath=1
+
+" CtrlP
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=*/ebin/*,*.beam
