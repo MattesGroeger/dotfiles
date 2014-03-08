@@ -28,6 +28,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'regedarek/ZoomWin'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on
 
@@ -72,9 +73,14 @@ set autoindent
 set clipboard=unnamed
 
 " Auto completion settings
-set completeopt=longest,menuone
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+set completeopt=longest,menu
+highlight Pmenu ctermfg=25 ctermbg=195
+highlight PmenuSel ctermfg=195 ctermbg=25
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+let g:SuperTabMappingTabLiteral = "<c-v>"
+let g:SuperTabLongestEnhanced = 1
+let g:SuperTabLongestHighlight = 1
 
 " Display tabs and trailing spaces
 set list
