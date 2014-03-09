@@ -11,7 +11,6 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-colorscheme-switcher'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
@@ -29,6 +28,7 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'regedarek/ZoomWin'
 Bundle 'ervandew/supertab'
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on
 
@@ -57,8 +57,8 @@ set nowritebackup                 " And again.
 set noswapfile                    " no swap files
 
 " Formatting options
-set showcmd     "show incomplete cmds down the bottom
-set showmode    "show current mode down the bottom
+set showcmd                       " Show incomplete cmds down the bottom
+set showmode                      " Show current mode down the bottom
 
 " Spell checker
 highlight SpellBad cterm=underline,bold
@@ -76,11 +76,6 @@ set clipboard=unnamed
 set completeopt=longest,menu
 highlight Pmenu ctermfg=25 ctermbg=195
 highlight PmenuSel ctermfg=195 ctermbg=25
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
-let g:SuperTabMappingTabLiteral = "<c-v>"
-let g:SuperTabLongestEnhanced = 1
-let g:SuperTabLongestHighlight = 1
 
 " Display tabs and trailing spaces
 set list
@@ -119,27 +114,16 @@ au BufReadPost *.sgte set syntax=html
 highlight clear SignColumn
 
 " Resize current buffer by +/- 5
-nnoremap <C-L> :vertical resize -5<CR>
-nnoremap <C-K> :resize +5<CR>
-nnoremap <C-J> :resize -5<CR>
-nnoremap <C-H> :vertical resize +5<CR>
+nmap <C-L> :vertical resize -5<CR>
+nmap <C-K> :resize +5<CR>
+nmap <C-J> :resize -5<CR>
+nmap <C-H> :vertical resize +5<CR>
 
 " F-Keys
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F3> :NERDTreeFind<CR>
-nnoremap <F4> :set hlsearch!<CR>
-
-" Move between windows with Ctrl + J,K,L,H
-" noremap <M-J> <C-W><C-J>
-" noremap <M-K> <C-W><C-K>
-" noremap <M-L> <C-W><C-L>
-" noremap <M-H> <C-W><C-H>
-
-" Search
-set grepprg=ack\ -k
-nnoremap gs :silent! :grep <C-R><C-W> .<CR>:copen<CR>:redra!<CR>
-nnoremap gn :silent! :keepjumps :cnext<CR>
-nnoremap gp :silent! :keepjumps :cprevious<CR>
+nmap <F2> :NERDTreeToggle<CR>
+nmap <F3> :NERDTreeFind<CR>
+nmap <F4> :set hlsearch!<CR>
+nmap <F5> :TagbarToggle<CR>
 
 " Open new windows at bottom/right
 set splitbelow
@@ -151,16 +135,40 @@ filetype indent on
 " Markdown initial fold off
 let g:vim_markdown_initial_foldlevel=99
 
-" Nerdtree
-let NERDTreeIgnore = ['\.meta$']
-
-" Custom file type handlin
+" Custom file type handling
 autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype cs setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-" BufExplorer config
-let g:bufExplorerShowRelativePath=1
 
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*/ebin/*,*.beam
+
+" Supertab
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+let g:SuperTabMappingTabLiteral = "<c-v>"
+let g:SuperTabLongestEnhanced = 1
+
+" TagBar
+let g:tagbar_width = 30
+let g:tagbar_autoclose = 1
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
+let g:tagbar_compact = 1
+let g:tagbar_indent = 1
+let g:tagbar_foldlevel = 2
+
+" NERD tree
+let NERDTreeIgnore = ['\.meta$']
+let NERDTreeMinimalUI = 1
+let NERDTreeAutoDeleteBuffer = 1
+
+" BufExplorer
+let g:bufExplorerShowRelativePath = 1
+
+" Ack
+set grepprg=ack\ -k
+nmap gs :silent! :grep <C-R><C-W> .<CR>:copen<CR>:redra!<CR>
+nmap gn :silent! :keepjumps :cnext<CR>
+nmap gp :silent! :keepjumps :cprevious<CR>
