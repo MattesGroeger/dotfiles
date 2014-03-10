@@ -6,29 +6,34 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Bundles
+" Bundle manager
 Bundle 'gmarik/vundle'
+
+" Plugins
 Bundle 'scrooloose/nerdtree'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'xolox/vim-misc'
-Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'wesQ3/vim-windowswap'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-repeat'
 Bundle 'mileszs/ack.vim'
-Bundle 'skwp/greplace.vim'
 Bundle 'godlygeek/tabular'
-Bundle 'jelera/vim-javascript-syntax'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'regedarek/ZoomWin'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
+
+" Language Support
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'jelera/vim-javascript-syntax'
+
+" Support & Utils
+Bundle 'xolox/vim-misc'
+Bundle 'tpope/vim-repeat'
 
 filetype plugin indent on
 
