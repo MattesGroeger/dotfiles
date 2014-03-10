@@ -30,6 +30,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'bitc/vim-hdevtools'
 
 " Support & Utils
 Bundle 'xolox/vim-misc'
