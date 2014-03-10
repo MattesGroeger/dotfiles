@@ -141,9 +141,8 @@ filetype indent on
 let g:vim_markdown_initial_foldlevel=99
 
 " Custom file type handling
-autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
 autocmd Filetype cs setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-
 
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
