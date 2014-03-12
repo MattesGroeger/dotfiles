@@ -172,9 +172,14 @@ let NERDTreeAutoDeleteBuffer = 1
 
 " BufExplorer
 let g:bufExplorerShowRelativePath = 1
+let g:bufExplorerDefaultHelp = 0
 
 " Ack
 set grepprg=ack\ -k
 nmap gs :silent! :grep <C-R><C-W> .<CR>:copen<CR>:redra!<CR>
 nmap gn :silent! :keepjumps :cnext<CR>
 nmap gp :silent! :keepjumps :cprevious<CR>
+
+" Syntastic
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
