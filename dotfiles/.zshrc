@@ -83,6 +83,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # added by travis gem
 [ -f /Users/mattes/.travis/travis.sh ] && source /Users/mattes/.travis/travis.sh
-
-# added by travis gem
 [ -f /Users/mattesgroeger/.travis/travis.sh ] && source /Users/mattesgroeger/.travis/travis.sh
+
+export LC_ALL=en_US.utf-8
+export LANG="$LC_ALL"
