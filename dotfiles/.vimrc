@@ -24,6 +24,7 @@ Bundle 'jlanzarotta/bufexplorer'
 Bundle 'regedarek/ZoomWin'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
+Bundle 'bitc/vim-hdevtools'
 
 " Language Support
 Bundle 'vim-ruby/vim-ruby'
