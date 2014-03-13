@@ -36,6 +36,7 @@ Bundle 'bitc/vim-hdevtools'
 " Support & Utils
 Bundle 'xolox/vim-misc'
 Bundle 'tpope/vim-repeat'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 filetype plugin indent on
 
@@ -183,3 +184,8 @@ nmap gp :silent! :keepjumps :cprevious<CR>
 " Syntastic
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+
+" Vim Intend Guides
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=8
