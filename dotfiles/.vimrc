@@ -93,7 +93,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 au InsertEnter * hi StatusLine ctermfg=darkred
 au InsertLeave * hi StatusLine ctermfg=white
 hi StatusLine ctermfg=white
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 
 " Command line auto completion
 set wildmenu
@@ -144,7 +144,7 @@ let g:vim_markdown_initial_foldlevel=99
 
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-set wildignore+=*/ebin/*,*.beam
+set wildignore+=*/ebin/*,*.beam,*/.eunit/*
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "context"
