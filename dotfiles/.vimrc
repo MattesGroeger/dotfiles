@@ -37,6 +37,7 @@ Bundle 'bitc/vim-hdevtools'
 Bundle 'xolox/vim-misc'
 Bundle 'tpope/vim-repeat'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'guns/xterm-color-table.vim'
 
 filetype plugin indent on
 
