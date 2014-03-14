@@ -79,8 +79,8 @@ filetype indent on
 
 " Custom file type handling
 autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
-autocmd Filetype cs setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-
+autocmd Filetype cs     setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 " Colors
 set t_Co=256
 colorscheme desert
@@ -93,7 +93,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 au InsertEnter * hi StatusLine ctermfg=darkred
 au InsertLeave * hi StatusLine ctermfg=white
 hi StatusLine ctermfg=white
-set fillchars+=vert:\
+set fillchars+=vert:\ 
 
 " Command line auto completion
 set wildmenu
@@ -114,7 +114,7 @@ highlight PmenuSel ctermfg=195 ctermbg=25
 
 " remove trailing whitespace on save
 function! TrimSpaces()
-  if !&binary && &filetype != 'diff'
+  if !&binary && &filetype != 'diff' && &filetype != 'vim'
     %s/\(^---\?\)\@<!\s*$//ge
     ''
   end
