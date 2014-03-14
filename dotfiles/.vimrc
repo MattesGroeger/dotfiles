@@ -85,7 +85,8 @@ autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=
 " Colors
 set t_Co=256
 colorscheme desert
-hi Search cterm=NONE ctermfg=black ctermbg=118
+hi Search     cterm=NONE ctermfg=black ctermbg=118
+hi MatchParen cterm=NONE ctermfg=255   ctermbg=1
 
 " Statusline contents
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %{SyntasticStatuslineFlag()}%=%-16(\ %l,%c-%v\ %)%P
