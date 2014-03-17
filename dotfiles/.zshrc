@@ -64,10 +64,10 @@ alias la='ls -hal'
 alias unfuckbootstrap="launchctl list|grep UIKitApplication|awk '{print $3}'|xargs launchctl"
 
 # Directories
-hash -d ws=~/Documents/workspaces
-hash -d wsios=~/Documents/workspaces/workspace_ios
-hash -d sbs=~/Documents/workspaces/workspace_sbs
-hash -d puios=~/Documents/workspaces/workspace_pu/pocketuniverse
+hash -d workspace=~/Documents/workspaces
+hash -d wsios=~/Documents/workspaces/objective-c
+hash -d sbs=~/Documents/workspaces/sbs
+hash -d puios=~/Documents/workspaces/project-wooga/pocketvillage
 
 function fnd {
   find . -name $1
