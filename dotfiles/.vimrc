@@ -78,23 +78,35 @@ set linebreak                     "wrap lines at convenient points
 " Load indent file for the current filetype
 filetype indent on
 
-" Custom file type handling
-autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
-autocmd Filetype cs     setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+augroup filetypes
+
+  " Custom file type handling
+  autocmd!
+  autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
+  autocmd Filetype cs     setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+  autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+  " Force syntax highlighting on weird file extensions
+  autocmd BufReadPost *.sgte set syntax=html
+
+augroup END
+
 " Colors
 set t_Co=256
 colorscheme desert
-hi Search     cterm=NONE ctermfg=black ctermbg=118
-hi MatchParen cterm=NONE ctermfg=255   ctermbg=1
+highlight Search     cterm=NONE ctermfg=black ctermbg=2
+highlight MatchParen cterm=NONE ctermfg=255   ctermbg=199
 
 " Statusline contents
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %{SyntasticStatuslineFlag()}%=%-16(\ %l,%c-%v\ %)%P
 
 " Highlight status bar when in insert mode
-au InsertEnter * hi StatusLine ctermfg=darkred
-au InsertLeave * hi StatusLine ctermfg=white
-hi StatusLine ctermfg=white
+augroup statusbar_highlight
+  autocmd!
+  autocmd InsertEnter * highlight StatusLine ctermfg=darkred
+  autocmd InsertLeave * highlight StatusLine ctermfg=white
+augroup END
+highlight StatusLine ctermfg=white
 set fillchars+=vert:\ 
 
 " Command line auto completion
@@ -103,7 +115,7 @@ set wildmode=longest:full,full
 
 " Current line highlight
 set cursorline                    " Enable highlight of current line
-hi CursorLine guisp=NONE gui=NONE guifg=NONE guibg=darkgrey ctermfg=NONE ctermbg=black term=NONE cterm=NONE
+highlight CursorLine guisp=NONE gui=NONE guifg=NONE guibg=darkgrey ctermfg=NONE ctermbg=black term=NONE cterm=NONE
 
 " Spell checker
 highlight SpellBad cterm=underline,bold
@@ -121,25 +133,28 @@ function! TrimSpaces()
     ''
   end
 endfunction
-autocmd FileWritePre * :silent! call TrimSpaces()
-autocmd FileAppendPre * :silent! call TrimSpaces()
-autocmd FilterWritePre * :silent! call TrimSpaces()
-autocmd BufWritePre * :silent! call TrimSpaces()
-
-" Force syntax highlighting on weird file extensions
-au BufReadPost *.sgte set syntax=html
+augroup remove_spaces
+  autocmd!
+  autocmd FileWritePre * :silent! call TrimSpaces()
+  autocmd FileAppendPre * :silent! call TrimSpaces()
+  autocmd FilterWritePre * :silent! call TrimSpaces()
+  autocmd BufWritePre * :silent! call TrimSpaces()
+augroup END
 
 " Resize current buffer by +/- 5
-nmap <C-L> :vertical resize -5<CR>
-nmap <C-K> :resize +5<CR>
-nmap <C-J> :resize -5<CR>
-nmap <C-H> :vertical resize +5<CR>
+nnoremap <C-L> :vertical resize -5<CR>
+nnoremap <C-K> :resize +5<CR>
+nnoremap <C-J> :resize -5<CR>
+nnoremap <C-H> :vertical resize +5<CR>
 
 " F-Keys
-nmap <F2> :NERDTreeToggle<CR>
-nmap <F3> :NERDTreeFind<CR>
-nmap <F4> :nohlsearch<CR>
-nmap <F5> :TagbarToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F3> :NERDTreeFind<CR>
+nnoremap <F4> :nohlsearch<CR>
+nnoremap <F5> :TagbarToggle<CR>
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Markdown
 let g:vim_markdown_initial_foldlevel=99
@@ -174,22 +189,22 @@ let g:bufExplorerDefaultHelp = 0
 
 " Ack
 set grepprg=ack\ -k
-nmap gs :silent! :grep <C-R><C-W> .<CR>:copen<CR>:redra!<CR>
-nmap gn :silent! :keepjumps :cnext<CR>
-nmap gp :silent! :keepjumps :cprevious<CR>
 
 " Syntastic
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 
 " GitGutter
-hi clear SignColumn
+highlight clear SignColumn
 
 " Vim Intend Guides
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_color_change_percent = 5
-let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
+let g:indent_guides_guide_size = 1
+augroup intendation_colors
+  autocmd!
+  autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  ctermbg=0
+  autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven ctermbg=0
+augroup END
