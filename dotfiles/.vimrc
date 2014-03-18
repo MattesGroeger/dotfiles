@@ -84,7 +84,7 @@ augroup filetypes
   " Custom file type handling
   autocmd!
   autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
-  autocmd Filetype cs     setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+  autocmd Filetype cs     setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
   autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
   " Force syntax highlighting on weird file extensions
