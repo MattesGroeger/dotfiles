@@ -33,6 +33,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'bitc/vim-hdevtools'
+Bundle 'kana/vim-vspec'
 
 " Support & Utils
 Bundle 'xolox/vim-misc'
