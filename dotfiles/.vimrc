@@ -41,6 +41,9 @@ Bundle 'tpope/vim-repeat'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'guns/xterm-color-table.vim'
 
+" Colors
+Bundle 'altercation/vim-colors-solarized'
+
 filetype plugin indent on
 
 " Basic editor settings
@@ -95,7 +98,8 @@ augroup END
 
 " Colors
 set t_Co=256
-colorscheme desert
+set background=dark
+colorscheme solarized
 highlight Search     cterm=NONE ctermfg=black ctermbg=2
 highlight MatchParen cterm=NONE ctermfg=255   ctermbg=199
 
@@ -105,7 +109,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 " Highlight status bar when in insert mode
 augroup statusbar_highlight
   autocmd!
-  autocmd InsertEnter * highlight StatusLine ctermfg=darkred
+  autocmd InsertEnter * highlight StatusLine ctermfg=202
   autocmd InsertLeave * highlight StatusLine ctermfg=white
 augroup END
 highlight StatusLine ctermfg=white
@@ -125,8 +129,6 @@ set spellsuggest=8
 
 " Auto completion settings
 set completeopt=longest,menu
-highlight Pmenu ctermfg=25 ctermbg=195
-highlight PmenuSel ctermfg=195 ctermbg=25
 
 " remove trailing whitespace on save
 function! TrimSpaces()
