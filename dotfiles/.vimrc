@@ -19,12 +19,10 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'mileszs/ack.vim'
-Bundle 'godlygeek/tabular'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'regedarek/ZoomWin'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
-Bundle 'bitc/vim-hdevtools'
 Bundle 'MattesGroeger/vim-bookmarks'
 
 " Language Support
@@ -36,11 +34,10 @@ Bundle 'bitc/vim-hdevtools'
 Bundle 'kana/vim-vspec'
 
 " Support & Utils
+Bundle 'MattesGroeger/vim-bookmarks'
 Bundle 'xolox/vim-misc'
-Bundle 'tpope/vim-repeat'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'guns/xterm-color-table.vim'
-Bundle 'MattesGroeger/vim-bookmarks'
 Bundle 'Rykka/colorv.vim'
 Bundle 'mattn/webapi-vim'
 
