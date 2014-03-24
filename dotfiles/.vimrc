@@ -102,7 +102,8 @@ set t_Co=256
 set background=light
 colorscheme solarized
 highlight Search     cterm=NONE ctermfg=NONE ctermbg=227
-highlight MatchParen cterm=NONE ctermfg=255   ctermbg=199
+highlight MatchParen cterm=NONE ctermfg=255  ctermbg=199
+highlight SignColumn ctermbg=15
 highlight SpecialKey ctermfg=250 ctermbg=NONE cterm=NONE
 highlight NonText    ctermfg=250 ctermbg=NONE
 
@@ -200,9 +201,6 @@ set grepprg=ack\ -k
 " Syntastic
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
-
-" GitGutter
-highlight clear SignColumn
 
 " Vim Intend Guides
 let g:indent_guides_auto_colors = 0
