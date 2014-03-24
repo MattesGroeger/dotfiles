@@ -92,7 +92,8 @@ augroup filetypes
   autocmd!
   autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
   autocmd Filetype cs     setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
-  autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+  autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
+  autocmd Filetype objcpp setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
 
   " Force syntax highlighting on weird file extensions
   autocmd BufReadPost *.sgte set syntax=html
