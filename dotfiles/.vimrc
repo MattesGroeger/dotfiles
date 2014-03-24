@@ -210,8 +210,8 @@ let g:indent_guides_color_change_percent = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
 let g:indent_guides_guide_size = 1
-" augroup intendation_colors
-"   autocmd!
-"   autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  ctermbg=0
-"   autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven ctermbg=1
-" augroup END
+augroup intendation_colors
+  autocmd!
+  autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  ctermbg=7
+  autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven ctermbg=7
+augroup END
