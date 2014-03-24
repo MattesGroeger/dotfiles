@@ -99,9 +99,9 @@ augroup END
 
 " Colors
 set t_Co=256
-set background=dark
+set background=light
 colorscheme solarized
-highlight Search     cterm=NONE ctermfg=black ctermbg=2
+highlight Search     cterm=NONE ctermfg=NONE ctermbg=227
 highlight MatchParen cterm=NONE ctermfg=255   ctermbg=199
 highlight SpecialKey ctermfg=250 ctermbg=NONE cterm=NONE
 highlight NonText    ctermfg=250 ctermbg=NONE
@@ -112,10 +112,10 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 " Highlight status bar when in insert mode
 augroup statusbar_highlight
   autocmd!
-  autocmd InsertEnter * highlight StatusLine ctermfg=202
-  autocmd InsertLeave * highlight StatusLine ctermfg=white
+  autocmd InsertEnter * highlight StatusLine ctermfg=red
+  autocmd InsertLeave * highlight StatusLine ctermfg=0
 augroup END
-highlight StatusLine ctermfg=white
+highlight StatusLine ctermfg=0
 set fillchars+=vert:\ 
 
 " Command line auto completion
@@ -124,7 +124,7 @@ set wildmode=longest:full,full
 
 " Current line highlight
 set cursorline                    " Enable highlight of current line
-highlight CursorLine guisp=NONE gui=NONE guifg=NONE guibg=darkgrey ctermfg=NONE ctermbg=black term=NONE cterm=NONE
+highlight CursorLine guisp=NONE gui=NONE guifg=NONE guibg=lightgrey ctermfg=NONE ctermbg=lightgrey term=NONE cterm=NONE
 
 " Spell checker
 highlight SpellBad cterm=underline,bold
@@ -210,8 +210,8 @@ let g:indent_guides_color_change_percent = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
 let g:indent_guides_guide_size = 1
-augroup intendation_colors
-  autocmd!
-  autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  ctermbg=0
-  autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven ctermbg=0
-augroup END
+" augroup intendation_colors
+"   autocmd!
+"   autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  ctermbg=0
+"   autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven ctermbg=1
+" augroup END
