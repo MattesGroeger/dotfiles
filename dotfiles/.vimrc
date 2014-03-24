@@ -40,6 +40,9 @@ Bundle 'xolox/vim-misc'
 Bundle 'tpope/vim-repeat'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'guns/xterm-color-table.vim'
+Bundle 'MattesGroeger/vim-bookmarks'
+Bundle 'Rykka/colorv.vim'
+Bundle 'mattn/webapi-vim'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
