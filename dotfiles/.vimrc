@@ -84,11 +84,11 @@ set linebreak                     "wrap lines at convenient points
 filetype indent on
 
 augroup filetypes
+  autocmd!
 
   " Custom file type handling
-  autocmd!
-  autocmd Filetype erlang setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
-  autocmd Filetype cs     setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
+  autocmd Filetype erlang setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
+  autocmd Filetype cs     setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 nowrap
   autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
   autocmd Filetype objcpp setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
 
@@ -204,7 +204,7 @@ highlight clear SignColumn
 
 " Vim Intend Guides
 let g:indent_guides_auto_colors = 0
-let g:indent_guides_color_change_percent = 5
+let g:indent_guides_color_change_percent = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
 let g:indent_guides_guide_size = 1
