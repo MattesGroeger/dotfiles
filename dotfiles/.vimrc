@@ -114,9 +114,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 augroup statusbar_highlight
   autocmd!
   autocmd InsertEnter * highlight StatusLine ctermfg=red
-  autocmd InsertLeave * highlight StatusLine ctermfg=0
+  autocmd InsertLeave * highlight StatusLine ctermfg=2
 augroup END
-highlight StatusLine ctermfg=0
+highlight StatusLine ctermfg=2
 set fillchars+=vert:\ 
 
 " Command line auto completion
