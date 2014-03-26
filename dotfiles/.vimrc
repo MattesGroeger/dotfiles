@@ -74,7 +74,7 @@ set autoindent
 
 " Display tabs and trailing spaces
 set list
-set listchars=tab:»·,nbsp:•,extends:»,precedes:«,trail:⋅
+set listchars=tab:→\ ,nbsp:•,extends:»,precedes:«,trail:⋅
 set incsearch                     "find the next match as we type the search
 set hlsearch                      "highlight searches by default
 set wrap                          "don't wrap lines
@@ -88,7 +88,7 @@ augroup filetypes
 
   " Custom file type handling
   autocmd Filetype erlang setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
-  autocmd Filetype cs     setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 nowrap
+  autocmd Filetype cs     setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 nowrap nosmartindent
   autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
   autocmd Filetype objcpp setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
 
@@ -103,6 +103,8 @@ set background=dark
 colorscheme solarized
 highlight Search     cterm=NONE ctermfg=black ctermbg=2
 highlight MatchParen cterm=NONE ctermfg=255   ctermbg=199
+highlight SpecialKey ctermfg=250 ctermbg=NONE cterm=NONE
+highlight NonText    ctermfg=250 ctermbg=NONE
 
 " Statusline contents
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %{SyntasticStatuslineFlag()}%=%-16(\ %l,%c-%v\ %)%P
