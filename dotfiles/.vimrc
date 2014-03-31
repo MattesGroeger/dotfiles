@@ -215,3 +215,6 @@ augroup intendation_colors
   autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  ctermbg=0
   autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven ctermbg=0
 augroup END
+
+" Bookmarks
+highlight BookmarkSign ctermbg=NONE ctermfg=4
