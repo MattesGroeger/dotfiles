@@ -3,4 +3,5 @@
 --exclude=.git
 --exclude=*.beam
 --exclude=*/ebin/*
+--exclude=.eunit/*
 --exclude=*/.eunit/*

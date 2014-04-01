@@ -186,7 +186,7 @@ let g:tagbar_indent = 1
 let g:tagbar_foldlevel = 2
 
 " NERD tree
-let NERDTreeIgnore = ['\.meta$']
+let NERDTreeIgnore = ['\.meta$', '\/\.eunit\/*']
 let NERDTreeMinimalUI = 1
 let NERDTreeAutoDeleteBuffer = 1
 
