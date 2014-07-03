@@ -164,12 +164,16 @@ nnoremap <F5> :TagbarToggle<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Paste yanked/cut word
+nnoremap S "_diwP
+vnoremap S "_dP
+
 " Markdown
 let g:vim_markdown_initial_foldlevel=99
 
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-set wildignore+=*/ebin/*,*.beam,*/.eunit/*
+set wildignore+=*/ebin/*,*.beam,*/.eunit/*,.eunit/*
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "context"

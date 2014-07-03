@@ -5,3 +5,4 @@
 --exclude=*/ebin/*
 --exclude=.eunit/*
 --exclude=*/.eunit/*
+--exclude=.eunit/*
