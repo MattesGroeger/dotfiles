@@ -1,0 +1,5 @@
+--color
+--ignore-dir=.eunit
+--ignore-dir=node_modules
+--ignore-dir=logs
+--ignore-dir=log
