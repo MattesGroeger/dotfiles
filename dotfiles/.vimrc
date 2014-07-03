@@ -108,7 +108,7 @@ highlight SpecialKey ctermfg=250 ctermbg=NONE cterm=NONE
 highlight NonText    ctermfg=250 ctermbg=NONE
 
 " Statusline contents
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %{SyntasticStatuslineFlag()}%=%-16(\ %l,%c-%v\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %=%-16(\ %l,%c-%v\ %)%P
 
 " Highlight status bar when in insert mode
 augroup statusbar_highlight
