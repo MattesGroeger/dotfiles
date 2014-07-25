@@ -87,6 +87,7 @@ augroup filetypes
   autocmd!
 
   " Custom file type handling
+  autocmd Filetype ruby   setlocal expandtab   tabstop=2 shiftwidth=2 softtabstop=2 colorcolumn=80
   autocmd Filetype erlang setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
   autocmd Filetype cs     setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 nowrap nosmartindent
   autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
