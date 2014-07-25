@@ -138,8 +138,11 @@ set completeopt=longest,menu
 " remove trailing whitespace on save
 function! TrimSpaces()
   if !&binary && &filetype != 'diff' && &filetype != 'vim'
+    let line = line('.')
+    let col = col('.')
     %s/\(^---\?\)\@<!\s*$//ge
     ''
+    call cursor(line, col)
   end
 endfunction
 augroup remove_spaces
