@@ -23,13 +23,12 @@ Bundle 'jlanzarotta/bufexplorer'
 Bundle 'regedarek/ZoomWin'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
-Bundle 'MattesGroeger/vim-bookmarks'
 
 " Language Support
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
 Bundle 'bitc/vim-hdevtools'
 Bundle 'kana/vim-vspec'
 
