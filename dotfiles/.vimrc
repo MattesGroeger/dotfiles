@@ -31,6 +31,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'bitc/vim-hdevtools'
 Bundle 'kana/vim-vspec'
+Bundle 'toyamarinyon/vim-swift'
 
 " Support & Utils
 Bundle 'MattesGroeger/vim-bookmarks'
@@ -39,6 +40,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'guns/xterm-color-table.vim'
 Bundle 'Rykka/colorv.vim'
 Bundle 'mattn/webapi-vim'
+Bundle 'mtth/scratch.vim'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
