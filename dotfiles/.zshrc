@@ -57,6 +57,7 @@ alias s='git status -sb'
 alias b='git branch -avv'
 alias r='git svn rebase'
 alias lg='git lg'
+alias lgf='git lgf'
 alias lgme='git lg -500 | egrep " (mgroeger|Mattes Groeger)\)"'
 alias ls="ls -G"
 alias ll='ls -hl'
