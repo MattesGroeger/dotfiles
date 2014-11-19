@@ -169,6 +169,10 @@ nnoremap <F5> :TagbarToggle<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " Paste yanked/cut word
 nnoremap S "_diwP
 vnoremap S "_dP
