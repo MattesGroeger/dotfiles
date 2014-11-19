@@ -1,0 +1,12 @@
+"3.8.3 (created: 2014/11/09 13:19:01)
+
+source! /Users/mattesgroeger/.vimperatorrc.local
+
+set complete=sbfh
+set hintchars=abcdefghijklmnopqrstuvwxyz
+set wildmode=full
+
+highlight Hint font-family: "Menlo", monospace; font-size: 80%; font-weight: normal; color: #FFFFFF; background-color: #3399FF; padding: 0px 3px;
+highlight -a HintElem background-color: #F6DBFF;
+
+" vim: set ft=vimperator:
