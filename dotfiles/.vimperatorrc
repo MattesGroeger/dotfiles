@@ -2,15 +2,23 @@
 
 source! /Users/mattesgroeger/.vimperatorrc.local
 
+" settings
+
 set complete=sbfh
 set hintchars=abcdefghijklmnopqrstuvwxyz
 set wildmode=full
 
+" shortcuts
+
+nmap <S-j> gT
+nmap <S-k> gt
 map d <Nop>
 nmap x :q<cr>
-" nmap t :tabopen<cr>
 nmap u 40k " scroll n lines up
 nmap d 40j " scroll n lines down
+" nmap t :tabopen<cr>
+
+" colors
 
 highlight Hint font-family: "Menlo", monospace; font-size: 80%; font-weight: normal; color: #FFFFFF; background-color: #3399FF; padding: 0px 3px;
 highlight -a HintElem background-color: #F6DBFF;
