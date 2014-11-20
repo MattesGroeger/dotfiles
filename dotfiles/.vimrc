@@ -31,7 +31,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'bitc/vim-hdevtools'
 Bundle 'kana/vim-vspec'
-Bundle 'toyamarinyon/vim-swift'
+Bundle 'Keithbsmiley/swift.vim'
 
 " Support & Utils
 Bundle 'MattesGroeger/vim-bookmarks'
@@ -92,6 +92,7 @@ augroup filetypes
   autocmd Filetype erlang setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80
   autocmd Filetype cs     setlocal expandtab   tabstop=4 shiftwidth=4 softtabstop=4 nowrap nosmartindent
   autocmd Filetype objc   setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
+  autocmd Filetype swift  setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
   autocmd Filetype objcpp setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 nowrap
 
   " Force syntax highlighting on weird file extensions
@@ -229,3 +230,16 @@ augroup END
 
 " Bookmarks
 highlight BookmarkSign ctermbg=NONE ctermfg=4
+" nmap <Leader>mm <Plug>ToggleBookmark
+" nmap <Leader>mi <Plug>Annotate
+" nmap m] <Plug>NextBookmark
+" nmap m[ <Plug>PrevBookmark
+" nmap <Leader>ma <Plug>ShowAllBookmarks
+" nmap <Leader>mc <Plug>ClearBookmarks
+" nmap <Leader>mx <Plug>ClearAllBookmarks
+
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_auto_save = 1
+function! g:BMWorkDirFileLocation()
+    return getcwd(). '/.vim-bookmarks2'
+endfunction
