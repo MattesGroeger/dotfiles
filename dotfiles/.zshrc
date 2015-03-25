@@ -42,6 +42,7 @@ alias -g G='| grep'
 alias -g L='| less'
 
 # Normal aliases
+alias be='bundle exec'
 alias gco='git co'
 alias gci='git ci'
 alias grb='git rb'
