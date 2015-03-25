@@ -174,6 +174,19 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" Highlight the column under the cursor
+function! EnableHighlightAlign()
+echo virtcol('.')
+execute "set colorcolumn=+1," . virtcol('.')
+endfunction
+nnoremap <leader>h :call EnableHighlightAlign()<cr>
+
+" Disable the highlight
+function! DisableHighlightAlign()
+execute "set colorcolumn=+1"
+endfunction
+nnoremap <leader>H :call DisableHighlightAlign()<cr>
+
 " Paste yanked/cut word
 nnoremap S "_diwP
 vnoremap S "_dP
