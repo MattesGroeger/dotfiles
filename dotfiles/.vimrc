@@ -1,50 +1,51 @@
 ﻿" Turn off vi compatibility
 set nocompatible
-
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Bundle manager
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-surround'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'wesQ3/vim-windowswap'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'mileszs/ack.vim'
-Bundle 'jlanzarotta/bufexplorer'
-Bundle 'regedarek/ZoomWin'
-Bundle 'ervandew/supertab'
-Bundle 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mileszs/ack.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'regedarek/ZoomWin'
+Plugin 'ervandew/supertab'
+Plugin 'majutsushi/tagbar'
 
 " Language Support
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'bitc/vim-hdevtools'
-Bundle 'kana/vim-vspec'
-Bundle 'Keithbsmiley/swift.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'bitc/vim-hdevtools'
+Plugin 'kana/vim-vspec'
+Plugin 'Keithbsmiley/swift.vim'
+Plugin 'tomlion/vim-solidity'
 
 " Support & Utils
-Bundle 'MattesGroeger/vim-bookmarks'
-Bundle 'xolox/vim-misc'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'guns/xterm-color-table.vim'
-Bundle 'Rykka/colorv.vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mtth/scratch.vim'
+Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'xolox/vim-misc'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'guns/xterm-color-table.vim'
+Plugin 'Rykka/colorv.vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mtth/scratch.vim'
 
 " Colors
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
+call vundle#end()
 filetype plugin indent on
 
 " Basic editor settings
