@@ -59,7 +59,6 @@ alias b='git branch -avv'
 alias r='git svn rebase'
 alias lg='git lg'
 alias lgf='git lgf'
-alias lgme='git lg -500 | egrep " (mgroeger|Mattes Groeger)\)"'
 alias ls="ls -G"
 alias ll='ls -hl'
 alias la='ls -hal'
@@ -67,9 +66,6 @@ alias unfuckbootstrap="launchctl list|grep UIKitApplication|awk '{print $3}'|xar
 
 # Directories
 hash -d workspace=~/Documents/workspaces
-hash -d wsios=~/Documents/workspaces/objective-c
-hash -d sbs=~/Documents/workspaces/sbs
-hash -d puios=~/Documents/workspaces/project-wooga/pocketvillage
 
 function fnd {
   find . -name $1
@@ -78,14 +74,9 @@ function fnd {
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/git/libexec/git-core:/usr/local/sbin:/usr/local/opt/mongodb:/usr/local/scala/scala-2.8.0.final/bin:/usr/local/apparat/apparat-1.0-RC9:/usr/local/bin/xcode-universal-binary:/usr/X11/bin:$PATH
-export CLOUDANT_URL=https://app4215228.heroku:gObSmm6KkKdhmLfoQxrNOmyq@app4215228.heroku.cloudant.com
 export NODE_PATH=NODE_PATH:/usr/local/lib/node_modules
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# added by travis gem
-[ -f /Users/mattes/.travis/travis.sh ] && source /Users/mattes/.travis/travis.sh
-[ -f /Users/mattesgroeger/.travis/travis.sh ] && source /Users/mattesgroeger/.travis/travis.sh
 
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
