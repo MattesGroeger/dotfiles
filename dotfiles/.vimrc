@@ -132,6 +132,9 @@ set wildmode=longest:full,full
 set cursorline                    " Enable highlight of current line
 highlight CursorLine guisp=NONE gui=NONE guifg=NONE guibg=black ctermfg=NONE ctermbg=black term=NONE cterm=NONE
 
+" Remove underline in Cursor Line Nr
+highlight CursorLineNr term=bold cterm=bold ctermfg=255 gui=bold
+
 " Spell checker
 highlight SpellBad cterm=underline,bold
 set spellsuggest=8
