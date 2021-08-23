@@ -110,7 +110,7 @@ set background=dark
 highlight clear SignColumn
 
 " Statusline contents
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %=%-16(\ %l,%c-%v\ %)%P
+set statusline=[%n]\ %<%.99f\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %=%5(\ %c\ %)
 
 " Update vim faster (also used for vim-gitgutter signs)
 set updatetime=100
