@@ -105,11 +105,15 @@ augroup END
 " Colors
 colorscheme solarized
 set background=dark
-highlight SignColumn ctermbg=0
-highlight SignColumn guibg=black ctermbg=black
+
+" Fix sign column backgrounds with solarized dark theme
+highlight clear SignColumn
 
 " Statusline contents
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %=%-16(\ %l,%c-%v\ %)%P
+
+" Update vim faster (also used for vim-gitgutter signs)
+set updatetime=100
 
 " Highlight status bar when in insert mode
 augroup statusbar_highlight
