@@ -79,7 +79,6 @@ set list
 set listchars=tab:→\ ,nbsp:•,extends:»,precedes:«,trail:⋅
 set incsearch                     "find the next match as we type the search
 set hlsearch                      "highlight searches by default
-set wrap                          "don't wrap lines
 set linebreak                     "wrap lines at convenient points
 
 " Load indent file for the current filetype
@@ -170,6 +169,7 @@ nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :NERDTreeFind<CR>
 nnoremap <F4> :nohlsearch<CR>
 nnoremap <F5> :TagbarToggle<CR>
+nnoremap <F6> :set wrap!<CR>
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
