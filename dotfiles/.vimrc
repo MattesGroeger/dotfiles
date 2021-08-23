@@ -20,7 +20,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'regedarek/ZoomWin'
 Plugin 'ervandew/supertab'
-Plugin 'majutsushi/tagbar'
+Plugin 'preservim/tagbar'
 
 " Language Support
 Plugin 'vim-ruby/vim-ruby'
@@ -209,6 +209,7 @@ let g:SuperTabMappingTabLiteral = "<c-v>"
 let g:SuperTabLongestEnhanced = 1
 
 " TagBar
+let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_2/bin/ctags'
 let g:tagbar_width = 30
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
