@@ -32,6 +32,7 @@ Plugin 'kana/vim-vspec'
 Plugin 'Keithbsmiley/swift.vim'
 Plugin 'tomlion/vim-solidity'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'vyperlang/vim-vyper'
 
 " Support & Utils
 Plugin 'MattesGroeger/vim-bookmarks'
