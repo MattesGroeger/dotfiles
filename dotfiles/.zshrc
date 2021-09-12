@@ -74,12 +74,12 @@ function fnd {
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/git/libexec/git-core:/usr/local/sbin:/usr/local/opt/mongodb:/usr/local/scala/scala-2.8.0.final/bin:/usr/local/apparat/apparat-1.0-RC9:/usr/local/bin/xcode-universal-binary:/usr/X11/bin:$PATH
-export NODE_PATH=NODE_PATH:/usr/local/lib/node_modules
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export NODE_PATH=NODE_PATH:/usr/local/lib/node_modules
 
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 
-export NVM_DIR="/Users/mattes/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
