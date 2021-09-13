@@ -33,6 +33,7 @@ Plugin 'Keithbsmiley/swift.vim'
 Plugin 'tomlion/vim-solidity'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'vyperlang/vim-vyper'
+Plugin 'MaxMEllon/vim-jsx-pretty'
 
 " Support & Utils
 Plugin 'MattesGroeger/vim-bookmarks'
