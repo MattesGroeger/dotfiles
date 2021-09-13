@@ -104,6 +104,7 @@ augroup END
 " Colors
 colorscheme solarized
 set background=dark
+highlight Normal ctermfg=grey ctermbg=black
 
 " Fix sign column backgrounds with solarized dark theme
 highlight clear SignColumn
