@@ -111,7 +111,7 @@ highlight Normal ctermfg=grey ctermbg=black
 highlight clear SignColumn
 
 " Statusline contents
-set statusline=[%n]\ %<%.99f\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %=%7(\ %c\ %P\ %)
+set statusline=[%n]\ %<%.99f\ %m\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}\ %=%7(\ %c\ %P\ %)
 
 " Update vim faster (also used for vim-gitgutter signs)
 set updatetime=100
