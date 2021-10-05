@@ -30,3 +30,5 @@
 	 path = .gitconfig-personal
 [includeIf "gitdir:~/workspaces/personal/"]
 	 path = .gitconfig-personal
+[includeIf "gitdir:~/workspaces/crypto/"]
+	 path = .gitconfig-crypto
