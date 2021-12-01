@@ -32,3 +32,5 @@
 	 path = .gitconfig-personal
 [includeIf "gitdir:~/workspaces/crypto/"]
 	 path = .gitconfig-crypto
+[init]
+	defaultBranch = main
